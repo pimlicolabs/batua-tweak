@@ -19,18 +19,18 @@ const Editor = lazy(() => import("@/components/editor/editor"));
 
 export function meta() {
   return [
-    { title: "tweakcn — Theme Generator for shadcn/ui" },
+    { title: "batua — A smart account shadcn/ui component" },
     {
       name: "description",
       content:
-        "Easily customize and preview your shadcn/ui theme with tweakcn. Modify colors, fonts, and styles in real-time.",
+        "Fully customizable smart account shadcn/ui component secured with passkeys.",
     },
   ];
 }
 
 export default function Component() {
   const { theme, toggleTheme } = useTheme();
-  const { stargazersCount } = useGithubStars("jnsahaj", "tweakcn");
+  const { stargazersCount } = useGithubStars("jnsahaj", "batua");
 
   const handleThemeToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { clientX: x, clientY: y } = event;
@@ -48,13 +48,13 @@ export default function Component() {
           <div className="px-2 md:px-4 py-4 flex items-center gap-2 justify-between">
             <div className="flex items-center gap-1">
               <Link to="/" className="flex items-center gap-2">
-                <Logo className="size-6" title="tweakcn" />
-                <span className="font-bold hidden md:block">tweakcn</span>
+                <Logo className="size-6" title="batua" />
+                <span className="font-bold hidden md:block">batua</span>
               </Link>
             </div>
             <div className="flex items-center gap-3.5">
               <SocialLink
-                href="https://github.com/jnsahaj/tweakcn"
+                href="https://github.com/jnsahaj/batua"
                 className="flex items-center gap-2 text-sm font-bold"
               >
                 <GitHubIcon className="size-4" />
