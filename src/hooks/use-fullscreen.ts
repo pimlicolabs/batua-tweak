@@ -1,30 +1,30 @@
-import { useState, useEffect } from "react";
-import screenfull from "screenfull";
+import { useState, useEffect } from "react"
+import screenfull from "screenfull"
 
 export const useFullscreen = () => {
-  const [isFullscreen, setIsFullscreen] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false)
 
-  useEffect(() => {
-    if (screenfull.isEnabled) {
-      const handleFullscreenChange = () => {
-        setIsFullscreen(screenfull.isFullscreen);
-      };
+    useEffect(() => {
+        if (screenfull.isEnabled) {
+            const handleFullscreenChange = () => {
+                setIsFullscreen(screenfull.isFullscreen)
+            }
 
-      screenfull.on("change", handleFullscreenChange);
-      return () => {
-        screenfull.off("change", handleFullscreenChange);
-      };
+            screenfull.on("change", handleFullscreenChange)
+            return () => {
+                screenfull.off("change", handleFullscreenChange)
+            }
+        }
+    }, [])
+
+    const toggleFullscreen = () => {
+        if (screenfull.isEnabled) {
+            screenfull.toggle()
+        }
     }
-  }, []);
 
-  const toggleFullscreen = () => {
-    if (screenfull.isEnabled) {
-      screenfull.toggle();
+    return {
+        isFullscreen,
+        toggleFullscreen
     }
-  };
-
-  return {
-    isFullscreen,
-    toggleFullscreen,
-  };
-};
+}

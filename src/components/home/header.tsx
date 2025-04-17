@@ -20,7 +20,7 @@ export function Header({
   setMobileMenuOpen,
 }: HeaderProps) {
   const { theme, toggleTheme } = useTheme();
-  const { stargazersCount } = useGithubStars("jnsahaj", "tweakcn");
+  const { stargazersCount } = useGithubStars("pimlicolabs", "batua");
 
   const handleThemeToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { clientX: x, clientY: y } = event;

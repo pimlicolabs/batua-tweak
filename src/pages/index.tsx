@@ -30,7 +30,7 @@ export function meta() {
 
 export default function Component() {
   const { theme, toggleTheme } = useTheme();
-  const { stargazersCount } = useGithubStars("jnsahaj", "batua");
+  const { stargazersCount } = useGithubStars("pimlicolabs", "batua");
 
   const handleThemeToggle = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { clientX: x, clientY: y } = event;
@@ -54,26 +54,14 @@ export default function Component() {
             </div>
             <div className="flex items-center gap-3.5">
               <SocialLink
-                href="https://github.com/jnsahaj/batua"
+                href="https://github.com/pimlicolabs/batua"
                 className="flex items-center gap-2 text-sm font-bold"
               >
                 <GitHubIcon className="size-4" />
                 {stargazersCount > 0 && stargazersCount.toLocaleString()}
               </SocialLink>
               <Separator orientation="vertical" className="h-5" />
-              <div className="hidden md:flex items-center gap-3.5">
-                <SocialLink
-                  href="https://github.com/sponsors/jnsahaj"
-                  className="flex items-center gap-1.5 px-2 py-1 rounded-md border hover:border-pink-500 hover:text-pink-500 transition-colors"
-                >
-                  <Heart className="size-4" strokeWidth={2.5} />
-                  <span className="text-sm font-medium">Support</span>
-                </SocialLink>
-                <SocialLink href="https://discord.gg/Phs4u2NM3n">
-                  <DiscordIcon className="size-5" />
-                </SocialLink>
-              </div>
-              <SocialLink href="https://x.com/iamsahaj_xyz">
+              <SocialLink href="https://x.com/pimlicoHQ">
                 <TwitterIcon className="size-4" />
               </SocialLink>
               <Separator orientation="vertical" className="h-5" />
